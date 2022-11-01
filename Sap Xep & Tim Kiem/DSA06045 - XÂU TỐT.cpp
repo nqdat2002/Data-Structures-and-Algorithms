@@ -42,7 +42,7 @@ int main() {
     cin.tie(NULL);
     cout.tie(NULL);
 
-	int n;
+	ll n;
 	vector<int> v;
 	string s;
 	cin >> n >> s;
