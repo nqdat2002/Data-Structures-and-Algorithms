@@ -71,7 +71,7 @@ void Kruskal(){
             tree.pop_back();
             continue;
         }
-        if(tree.size() - n + 1 > 0) break;
+        if(tree.size() - n + 1 == 0) break;
     }
     cout << res << endl;
 }
