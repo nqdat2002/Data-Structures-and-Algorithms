@@ -46,7 +46,7 @@ void Solve(vector<int> a, int n){
 	vector<int> ans;
 	int cnt = 0;
 	for(int i = 0; i < n - 1; i ++){
-		if(b[i] < c[i + 1]){
+		if(b[i] <= c[i + 1]){
 			cnt++;
 			ans.push_back(i + 1);
 		}
@@ -70,4 +70,3 @@ int main(){
 	}
 	return 0;
 }
-
