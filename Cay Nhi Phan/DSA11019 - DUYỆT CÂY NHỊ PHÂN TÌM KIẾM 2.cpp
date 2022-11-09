@@ -30,13 +30,6 @@ void FileIO(){
     freopen("output.txt", "w", stdout);
 }
 
-// Author: Nguyen Quoc Dat
-// ID: B20DCPT053
-// Organization: PTIT
-// Date: 07/03/22 10:30
-// Program: Duyet cay nhi phan tim kiem 2
-// -------------------  Your code STARTS here !!!---------------------------
-
 typedef struct node{
     int data;
     node *left;
@@ -80,15 +73,27 @@ int main(){
 
     int t; cin >> t;
     while(t--){
-        tree root = NULL;
-        int n, value;
-        cin >> n;
+        int n; cin >> n;
+        vector<int> a;
+        set<int> st;
         for(int i = 0; i < n; ++i){
-            cin >> value;
-            root = Insert(root, value);
+            int x; cin >> x;
+            a.push_back(x);
+            st.insert(x);
         }
-        showPostOrder(root);
-        cout << endl;
+        if(st.size() < n){
+            cout << 0 << endl;
+            continue;
+        }
+        int ok = 1;
+        for(int i = 0; i < n - 1; ++i){
+            if(a[i] > a[i + 1]){
+                cout << 0 << endl;
+                ok = 0;
+                break;
+            }
+        }
+        if(ok) cout << 1 << endl;
     }
     return 0;
 }
