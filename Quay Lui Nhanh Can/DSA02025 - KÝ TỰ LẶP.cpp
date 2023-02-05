@@ -99,8 +99,7 @@ int main(){
 	cin.tie(NULL);
 	cout.tie(NULL);
 
-	FileIO();
-	int t; cin >> t;
+	int t = 1;
 	while(t--){
 
 		init();
